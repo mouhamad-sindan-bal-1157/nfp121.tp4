@@ -1,16 +1,16 @@
 package question2;
 
-//import java.awt.event. // √† compl√©ter
-//import java.awt.event. // √† compl√©ter
+import java.awt.event.ActionListener ;// ‡ complÈter
+import java.awt.event.ActionEvent; // ‡ complÈter
 import java.awt.TextArea;
 
 /**
- * D√©crivez votre classe JButtonObserver ici.
- * 
- * @author (votre nom)
- * @version (un num√©ro de version ou une date)
+ * DÈcrivez votre classe JButtonObserver ici.
+ * Button click ovbserver
+ * @author Anthony Trad
+ * @version 1.0
  */
-public class JButtonObserver { // √† compl√©ter
+public class JButtonObserver implements ActionListener{ // ‡ complÈter
 
     private String nom;
     private TextArea contenu;
@@ -31,15 +31,13 @@ public class JButtonObserver { // √† compl√©ter
     /**
      * affichage d'un message dans la zone de texte ce message est de la forme
      * observateur this.nom : clic du bouton nom_du_bouton exemple : observateur
-     * jbo1 : clic du bouton A, voir la m√©thode getActionCommand()
+     * jbo1 : clic du bouton A, voir la mÈthode getActionCommand()
      * 
-     * @param √†
-     *            compl√©ter
+     * @param ActionEvent e
      */
-    public void action________/* √† compl√©ter */(/* √† compl√©ter */) {
-        String message = ""; // √† compl√©ter, inspirez-vous de l'applette de l'√©nonc√©
+    public void actionPerformed(ActionEvent e) {
+        String message = "observeur ".concat(this.nom).concat(" : clic du bouton ").concat(e.getActionCommand()); // ‡ complÈter, inspirez-vous de l'applette de l'ÈnoncÈ
         contenu.append(message + "\n");
     }
 
 }
-
